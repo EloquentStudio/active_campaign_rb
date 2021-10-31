@@ -1,0 +1,15 @@
+{
+  "Skeleton Endpoint Specification": {
+    "scope": "yaml,yml",
+    "prefix": "aces",
+    "body": [
+      ":${1:name}:",
+      "  :description: ${2:description}",
+      "  :link:",
+      "    :href: ${3:path}",
+      "    :method: :${4:GET}",
+      "    :template: ${5:false}"
+    ],
+    "description": "Skeleton Endpoint Specification Template"
+  }
+}

@@ -1,0 +1,604 @@
+---
+:list_accounts:
+  :description: Retrieve all existing accounts
+  :link:
+    :href: accounts
+    :method: :GET
+    :template: false
+
+:create_account:
+  :description: Create a new account
+  :link:
+    :href: accounts
+    :method: :POST
+    :template: false
+
+:update_account:
+  :description: Update an existing account
+  :link:
+    :href: accounts/%{id}
+    :method: :PUT
+    :template: true
+
+:retrieve_account:
+  :description: Retrieve an existing account
+  :link:
+    :href: accounts/%{id}
+    :method: :GET
+    :template: true
+
+:delete_account:
+  :description: Delete an existing account
+  :link:
+    :href: accounts/%{id}
+    :method: :DELETE
+    :template: true
+
+:create_account_note:
+  :description: Create a new note for an account
+  :link:
+    :href: accounts/%{id}/notes
+    :method: :POST
+    :template: true
+
+:update_account_note:
+  :description: Update an existing note for an account
+  :link:
+    :href: accounts/%{id}/notes/%{noteid}
+    :method: :PUT
+    :template: true
+
+:bulk_delete_accounts:
+  :description: Delete one or more existing accounts
+  :link:
+    :href: accounts/bulk_delete?ids=%{ids}
+    :method: :DELETE
+    :template: true
+
+:create_account_contact:
+  :description: Create an account-contact association
+  :link:
+    :href: accountContacts
+    :method: :POST
+    :template: false
+
+:retrieve_account_contact:
+  :description: Retrieve a account-contact association
+  :link:
+    :href: accountContacts/%{id}
+    :method: :GET
+    :template: true
+
+:update_account_contact:
+  :description: Update a account-contact association
+  :link:
+    :href: accountContacts/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_account_contact:
+  :description: Delete a account-contact association
+  :link:
+    :href: accountContacts/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_account_contacts:
+  :description: List all account-contact associations
+  :link:
+    :href: accountContacts
+    :method: :GET
+    :template: false
+
+:create_custom_account_field:
+  :description: Create a custom account field
+  :link:
+    :href: accountCustomFieldMeta
+    :method: :POST
+    :template: false
+
+:retrieve_custom_account_field:
+  :description: Retrieve a custom account field
+  :link:
+    :href: accountCustomFieldMeta/%{id}
+    :method: :GET
+    :template: true
+
+:update_custom_account_field:
+  :description: Update a custom account field
+  :link:
+    :href: accountCustomFieldMeta/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_custom_account_field:
+  :description: Delete a custom account field
+  :link:
+    :href: accountCustomFieldMeta/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_custom_account_fields:
+  :description: List all custom account fields
+  :link:
+    :href: accountCustomFieldMeta
+    :method: :GET
+    :template: false
+
+:create_custom_account_field_value:
+  :description: Create a custom account field value
+  :link:
+    :href: accountCustomFieldData
+    :method: :POST
+    :template: false
+
+:bulk_create_custom_account_field_values:
+  :description: Bulk create a custom account field value
+  :link:
+    :href: accountCustomFieldData/bulkCreate
+    :method: :POST
+    :template: false
+
+:retrieve_custom_account_field_value:
+  :description: Retrieve a custom account field value
+  :link:
+    :href: accountCustomFieldData/%{id}
+    :method: :GET
+    :template: true
+
+:update_custom_account_field_value:
+  :description: Update a custom account field value
+  :link:
+    :href: accountCustomFieldData/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_custom_account_field_value:
+  :description: Delete a custom account field value
+  :link:
+    :href: accountCustomFieldData/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_custom_account_field_values:
+  :description: List all custom account field values
+  :link:
+    :href: accountCustomFieldData
+    :method: :GET
+    :template: false
+
+:bulk_update_custom_account_field_values:
+  :description: Bulk update a custom account field value
+  :link:
+    :href: accountCustomFieldData/bulkUpdate
+    :method: :PATCH
+    :template: false
+
+:list_automations:
+  :description: List all automations
+  :link:
+    :href: automations
+    :method: :GET
+    :template: false
+
+:create_contact:
+  :description: Create a contact
+  :link:
+    :href: contacts
+    :method: :POST
+    :template: false
+
+:sync_contact:
+  :description: Create or Update a contact
+  :link:
+    :href: contact/sync
+    :method: :POST
+    :template: false
+
+:retrieve_contact:
+  :description: Retrieve an existing contact
+  :link:
+    :href: contacts/%{id}
+    :method: :GET
+    :template: true
+
+:update_contact:
+  :description: Update a contact
+  :link:
+    :href: contacts/%{id}
+    :method: :PUT
+    :template: false
+
+:update_contact_list_status:
+  :description: Subscribe a contact to a list or unsubscribe a contact from a list
+  :link:
+    :href: contactLists
+    :method: :POST
+    :template: false
+
+:delete_contact:
+  :description: Delete a contact
+  :link:
+    :href: contacts/%{id}
+    :method: :DELETE
+    :template: false
+
+:list_contacts:
+  :description: List all contacts, search contacts, or filter contacts by many criteria. For example, search for specific contacts by email, list, or custom field value.
+  :link:
+    :href: contacts
+    :method: :GET
+    :template: false
+
+
+:list_contact_automations:
+  :description: List all automations the contact is in
+  :link:
+    :href: contacts/%{id}/contactAutomations
+    :method: :GET
+    :template: false
+
+:retrieve_contact_score_values:
+  :description: Retrieve a contacts score value
+  :link:
+    :href: contacts/%{id}/scoreValues
+    :method: :GET
+    :template: false
+
+:bulk_import_contacts:
+  :description: Bulk import contacts
+  :link:
+    :href: import/bulk_import
+    :method: :POST
+    :template: false
+
+:bulk_import_status_list:
+  :description: Bulk import status list
+  :link:
+    :href: import/bulk_import
+    :method: :GET
+    :template: false
+
+:bulk_import_status_info:
+  :description: Bulk import status info
+  :link:
+    :href: import/info
+    :method: :GET
+    :template: false
+
+:list_contact_activities:
+  :description: List contact activities
+  :link:
+    :href: activities
+    :method: :GET
+    :template: false
+
+:create_contact_automation:
+  :description: Add a contact to an automation
+  :link:
+    :href: contactAutomations
+    :method: :POST
+    :template: false
+
+:delete_contact_automation:
+  :description: Remove a contact from an automation
+  :link:
+    :href: contactAutomations/%{id}
+    :method: :DELETE
+    :template: false
+
+:retrieve_contact_automation:
+  :description: Retrieve an automation a contact is in
+  :link:
+    :href: contactAutomations/%{id}
+    :method: :GET
+    :template: true
+
+:list_contact_automations:
+  :description: List all contact automations
+  :link:
+    :href: contactAutomations
+    :method: :GET
+    :template: false
+
+:list_email_activities:
+  :description: List all email activities
+  :link:
+    :href: emailActivities
+    :method: :GET
+    :template: false
+
+:create_custom_field:
+  :description: Create a custom field
+  :link:
+    :href: fields
+    :method: :POSt
+    :template: false
+
+:retrieve_custom_field:
+  :description: Retrieve a custom field
+  :link:
+    :href: fields/%{id}
+    :method: :GET
+    :template: true
+
+:update_custom_field:
+  :description: Update a custom field
+  :link:
+    :href: fields/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_custom_field:
+  :description: Delete a custom field
+  :link:
+    :href: fields/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_custom_fields:
+  :description: List all custom fields
+  :link:
+    :href: fields
+    :method: :GET
+    :template: false
+
+:create_custom_field_relation_to_list:
+  :description: Create a custom field relationship to list(s) (relid 0 makes the field available on all lists)
+  :link:
+    :href: fieldRels
+    :method: :POST
+    :template: false
+
+:create_custom_field_value:
+  :description: Create a custom field value
+  :link:
+    :href: fieldValues
+    :method: :POST
+    :template: false
+
+:retrieve_custom_field_value:
+  :description: Retrieve a custom field value
+  :link:
+    :href: fieldValues/%{id}
+    :method: :GET
+    :template: true
+
+:update_custom_field_value:
+  :description: Update a custom field value for contact
+  :link:
+    :href: fieldValues/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_custom_field_value:
+  :description: Delete a custom field value
+  :link:
+    :href: fieldValues/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_custom_field_values:
+  :description: List all custom field values
+  :link:
+    :href: fieldValues
+    :method: :GET
+    :template: false
+
+:create_custom_field_options:
+  :description: Create custom field options
+  :link:
+    :href: fieldOption/bulk
+    :method: :POST
+    :template: false
+
+:create_tag:
+  :description: Create a tag
+  :link:
+    :href: tags
+    :method: :POST
+    :template: false
+
+:update_tag:
+  :description: Update a tag
+  :link:
+    :href: tags/%{id}
+    :method: :PUT
+    :template: false
+
+:retrieve_tag:
+  :description: Retrieve a tag
+  :link:
+    :href: tags/%{id}
+    :method: :GET
+    :template: true
+
+:delete_tag:
+  :description: Delete a tag
+  :link:
+    :href: tags/%{id}
+    :method: :DELETE
+    :template: false
+
+:list_tags:
+  :description: List all tags
+  :link:
+    :href: tags
+    :method: :GET
+    :template: false
+
+
+:create_contact_tag:
+  :description: Add a tag to contact
+  :link:
+    :href: contactTags
+    :method: :POST
+    :template: false
+
+:delete_contact_tag:
+  :description: Delete a contact tag
+  :link:
+    :href: contactTags/%{id}
+    :method: :DELETE
+    :template: false
+
+:list_brandings:
+  :description: List all existing branding resources
+  :link:
+    :href: brandings
+    :method: :GET
+    :template: false
+
+:retrieve_branding:
+  :description: Retrieve an existing branding resource
+  :link:
+    :href: brandings/%{id}
+    :method: :GET
+    :template: true
+
+:update_branding:
+  :description: Update an existing branding resource
+  :link:
+    :href: brandings/%{id}
+    :method: :PUT
+    :template: true
+
+:create_address:
+  :description: Create an address
+  :link:
+    :href: addresses
+    :method: :POST
+    :template: false
+
+:retrieve_address:
+  :description: Retrieve an address
+  :link:
+    :href: addresses/%{id}
+    :method: :GET
+    :template: true
+
+:update_address:
+  :description: Update an address
+  :link:
+    :href: addresses/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_address:
+  :description: Delete an address
+  :link:
+    :href: addresses/%{id}
+    :method: :DELETE
+    :template: true
+
+:delete_address_group:
+  :description: Delete address associated with a specific user group
+  :link:
+    :href: addressGroups/%{id}
+    :method: :DELETE
+    :template: true
+
+:delete_address_list:
+  :description: Delete address associated with a specific list
+  :link:
+    :href: addressLists/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_addresses:
+  :description: List all addresses
+  :link:
+    :href: addresses
+    :method: :GET
+    :template: false
+
+:create_calendar_feed:
+  :description: Create a calendar feed
+  :link:
+    :href: calendars
+    :method: :POST
+    :template: false
+
+:retrieve_calendar_feed:
+  :description: Retrieve a calendar feed
+  :link:
+    :href: calendars/%{id}
+    :method: :GET
+    :template: true
+
+:update_calendar_feed:
+  :description: Update a calendar feed
+  :link:
+    :href: calendars/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_calendar_feed:
+  :description: Delete a calendar feed
+  :link:
+    :href: calendars/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_calendar_feeds:
+  :description: List all calendar feeds
+  :link:
+    :href: calendars
+    :method: :GET
+    :template: false
+
+:list_campaigns:
+  :description: List all campaigns
+  :link:
+    :href: campaigns
+    :method: :GET
+    :template: false
+
+:retrieve_campaign_links:
+  :description: Retrieve links associated to campaign
+  :link:
+    :href: campaigns/%{id}/links
+    :method: :GET
+    :template: true
+
+:retrieve_campaign:
+  :description: Retrieve a campaign
+  :link:
+    :href: campaigns/%{id}
+    :method: :GET
+    :template: true
+
+:create_message:
+  :description: Create a message
+  :link:
+    :href: messages
+    :method: :POST
+    :template: false
+
+:retrieve_message:
+  :description: Retrieve a message
+  :link:
+    :href: messages/%{id}
+    :method: :GET
+    :template: true
+
+:update_message:
+  :description: Update a message
+  :link:
+    :href: messages/%{id}
+    :method: :PUT
+    :template: true
+
+:delete_message:
+  :description: Delete a message
+  :link:
+    :href: messages/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_messages:
+  :description: List all messages
+  :link:
+    :href: messages
+    :method: :GET
+    :template: false

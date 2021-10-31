@@ -1,0 +1,5 @@
+bump:
+  recurse: false
+  file: lib/active_campaign_rb/version.rb
+release:
+  host: https://rubygems.org
