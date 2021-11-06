@@ -1,5 +1,9 @@
-## [Unreleased]
+## [0.1.1] - 2021-11-06
+- Fixes
+  - typo in method name for `Create a custom field` endpoint
 
+- New APIs Supported
+  - Lists
 ## [0.1.0] - 2021-10-29
 
 - Initial release

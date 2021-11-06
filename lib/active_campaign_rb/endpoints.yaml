@@ -312,7 +312,7 @@
   :description: Create a custom field
   :link:
     :href: fields
-    :method: :POSt
+    :method: :POST
     :template: false
 
 :retrieve_custom_field:
@@ -389,6 +389,41 @@
   :description: Create custom field options
   :link:
     :href: fieldOption/bulk
+    :method: :POST
+    :template: false
+
+:create_list:
+  :description: Create a contact list
+  :link:
+    :href: lists
+    :method: :POST
+    :template: false
+
+:retrieve_list:
+  :description: Retrieve a contact list
+  :link:
+    :href: lists/%{id}
+    :method: :GET
+    :template: false
+
+:delete_list:
+  :description: Delete a contact list
+  :link:
+    :href: lists/%{id}
+    :method: :DELETE
+    :template: true
+
+:list_lists:
+  :description: List all contact lists
+  :link:
+    :href: lists
+    :method: :GET
+    :template: false
+
+:create_list_group_permission:
+  :description: Create a list group permission
+  :link:
+    :href: listGroups
     :method: :POST
     :template: false
 
