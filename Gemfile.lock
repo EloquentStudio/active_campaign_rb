@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    active_campaign_rb (0.1.1)
+    active_campaign_rb (1.0.0)
       activesupport (>= 6.1)
       faraday (~> 1.8)
       oj (~> 3.13)
@@ -84,6 +84,8 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-darwin-20
+  x86_64-darwin-21
 
 DEPENDENCIES
   active_campaign_rb!
@@ -92,4 +94,4 @@ DEPENDENCIES
   rubocop (~> 1.7)
 
 BUNDLED WITH
-   2.2.15
+   2.2.19

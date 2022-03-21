@@ -31,7 +31,7 @@ module ActiveCampaignRb
   end
 
   ENDPOINTS.each do |name, config|
-    define_method(name) do |**args|
+    define_method(name) do |args|
       http_methods = config.dig(:link, :method)
       request_path = config.dig(:link, :href)
 
